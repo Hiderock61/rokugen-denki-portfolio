@@ -193,3 +193,23 @@ footer { padding: 26px 20px; text-align: center; color: var(--muted); font-size:
   .project-facts div:nth-child(2) { border-right: 0; }
   .project-facts div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 }
+
+/* Minimal additions for case-study hero buttons to ensure full clickability and no overlap */
+.hero { overflow: visible; }
+.hero-actions { position: relative; z-index: 1; }
+.hero-actions .button {
+  pointer-events: auto; /* ensure clickable */
+  position: relative; /* create stacking context */
+  z-index: 2; /* sit above simple decorations */
+  min-width: 140px; /* preserve design intent */
+}
+
+/* Prevent pseudo-elements from intercepting clicks inside hero */
+.hero *::before, .hero *::after { pointer-events: none; }
+
+/* Ensure buttons don't cause horizontal overflow on small screens */
+@media (max-width: 760px) {
+  .hero-actions { gap: 8px; }
+  .hero-actions { display: flex; flex-direction: column; align-items: stretch; }
+  .hero-actions .button { width: 100%; box-sizing: border-box; }
+}
