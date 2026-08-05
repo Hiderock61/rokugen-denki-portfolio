@@ -1,0 +1,3 @@
+* Revert "Add mini-nav and rename hero buttons to 'Beforeを見る' / 'Afterを見る' (relative links), inline CSS"
+
+This reverts commit c1b6122c72113c6f7bcf9d91e86c618d345764c1.
