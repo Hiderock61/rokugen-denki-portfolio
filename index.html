@@ -7,6 +7,19 @@
   <title>六弦電気工房｜ギター・ベース修理</title>
   <link rel="stylesheet" href="style.css">
   <style>footer a{color:#c9a87d;text-decoration:none}footer a:hover{text-decoration:underline}</style>
+  <style>
+    /* 小型共通ナビとボタン（ページ単位の上書きCSSを最小化） */
+    .mini-nav{display:flex;gap:8px;justify-content:center;padding:10px 16px}
+    .mini-nav a{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:8px;border:1px solid var(--tan);text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;min-height:44px}
+    .mini-nav a.active{background:var(--tan);color:#fff}
+    .hero-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;justify-content:center}
+    .button{min-width:140px;min-height:46px;padding:10px 16px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--tan);border-radius:8px;text-decoration:none;font-size:15px;font-weight:800}
+    .button-primary{background:var(--tan);color:#fff}
+    .button-secondary{background:#fff;color:var(--tan)}
+    .button:hover{filter:brightness(.96)}
+    .before-notice{background:#fff;padding:12px 14px;border-left:4px solid var(--tan);margin:12px 20px;border-radius:6px;font-weight:700;text-align:center}
+    @media(max-width:760px){.mini-nav a{padding:12px 16px;font-size:16px;min-height:48px}.button{min-height:48px;font-size:16px}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -20,6 +33,12 @@
     </nav>
   </header>
 
+  <nav class="mini-nav" aria-label="版切替ナビ">
+    <a href="index.html" class="active" aria-current="page">完成版</a>
+    <a href="before/index.html">修正前版</a>
+    <a href="case-study.html">ケーススタディ</a>
+  </nav>
+
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
@@ -27,6 +46,10 @@
         <h1>鳴らし続けるための、<br>町の修理工房。</h1>
         <p>弾き慣れた一本を、また気持ちよくステージへ。</p>
         <a class="hero-link" href="#services">修理メニューを見る →</a>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="before/index.html">修正前版を見る</a>
+          <a class="button button-primary" href="case-study.html">改善ケーススタディを見る</a>
+        </div>
       </div>
       <div class="hero-visual" role="img" aria-label="作業台に置かれたギターをイメージした装飾">
         <span class="neck"></span><span class="body-shape"></span><span class="work-light"></span>
@@ -48,17 +71,17 @@
     <section id="services" class="section services">
       <div class="section-heading light"><p>SERVICE</p><h2>修理メニュー</h2></div>
       <div class="service-grid">
-        <article><span>01</span><h3>ネック・弦高調整</h3><dl class="service-detail"><dt>対応する症状</dt><dd>弦が押さえにくい、音が詰まる、チューニングが合いにくい</dd><dt>主な作業</dt><dd>ネック調整、弦高調整、オクターブ調整、ピックアップ高調整</dd></dl></article>
-        <article><span>02</span><h3>電装・ノイズ修理</h3><dl class="service-detail"><dt>対応する症状</dt><dd>音が出ない、音が途切れる、ガリやノイズが出る</dd><dt>主な作業</dt><dd>ジャック、ポット、スイッチ、配線、ハンダの点検・修理</dd></dl></article>
-        <article><span>03</span><h3>フレット・ナット修理</h3><dl class="service-detail"><dt>対応する症状</dt><dd>ビビり、音詰まり、弦落ち、チョーキング時の違和感</dd><dt>主な作業</dt><dd>フレットすり合わせ・交換、ナット溝調整、ナット製作</dd></dl></article>
-        <article><span>04</span><h3>パーツ交換</h3><dl class="service-detail"><dt>対応する症状</dt><dd>部品の破損や動作不良、音や操作感を変更したい</dd><dt>主な作業</dt><dd>ペグ、ブリッジ、ピックアップ、ポット、スイッチの交換・取付</dd></dl></article>
+        <article><span>01</span><h3>ネック・弦高調整</h3><dl class="service-detail"><dt>対応する症状</dt><dd>弦が押さえにくい、音が詰まる、チューニングが合いません</dd></dl></article>
+        <article><span>02</span><h3>電装・ノイズ修理</h3><dl class="service-detail"><dt>対応する症状</dt><dd>音が出ない、音が途切れる、ガリやノイズが出る</dd></dl></article>
+        <article><span>03</span><h3>フレット・ナット修理</h3><dl class="service-detail"><dt>対応する症状</dt><dd>ビビり、音詰まり、弦落ち、チョーキング時の違和感</dd></dl></article>
+        <article><span>04</span><h3>パーツ交換</h3><dl class="service-detail"><dt>対応する症状</dt><dd>部品の破損や動作不良、音や操作感を変更したい</dd></dl></article>
       </div>
     </section>
 
     <section id="access" class="section access">
       <div class="section-heading light"><p>OPENING HOURS</p><h2>営業時間</h2></div>
       <p class="access-lead">修理・調整のご相談は完全予約制です。ご来店前に営業時間をご確認ください。</p>
-      <div class="hours"><div><strong>営業日</strong><span>月・火・木・金　12:00 — 20:00</span></div><div><strong>土・日</strong><span>11:00 — 18:00</span></div><div><strong>定休日</strong><span>水曜日・不定休</span></div></div>
+      <div class="hours"><div><strong>営業日</strong><span>月・火・木・金　12:00 — 20:00</span></div><div><strong>土・日</strong><span>11:00 — 18:00</span></div><div><strong>定休日</strong><span>水曜</span></div></div>
       <div class="access-actions">
         <p>東京都杉並区六弦町1-6-6（架空）／ 完全予約制</p>
         <a class="contact-button" href="mailto:info@example.com">修理・調整について相談する</a>
@@ -83,19 +106,19 @@
     <section id="works" class="section works">
       <div class="section-heading"><p>REPAIR LOG</p><h2>修理事例</h2></div>
       <div class="works-grid">
-        <article><div class="work-photo sunburst"><span>CASE 01</span></div><p class="work-meta">STRATOCASTER TYPE / 1990s</p><h3>長期保管後の総合調整</h3><p>ネック調整、電装清掃、フレット研磨。硬かった操作部も扱いやすく整えました。</p></article>
-        <article><div class="work-photo bass"><span>CASE 02</span></div><p class="work-meta">JAZZ BASS TYPE / 2010s</p><h3>ノイズと音切れの修理</h3><p>ジャックと配線を交換。接点を見直し、演奏中に起きていた音切れを解消しました。</p></article>
-        <article><div class="work-photo black"><span>CASE 03</span></div><p class="work-meta">LES PAUL TYPE / 2000s</p><h3>弦高とフレットの調整</h3><p>すり合わせとセットアップを行い、ハイポジションの音詰まりを改善しました。</p></article>
+        <article><div class="work-photo sunburst"><span>CASE 01</span></div><p class="work-meta">STRATOCASTER TYPE / 1990s</p><h3>長期保管後の総合調整</h3><p>ネック調整、電装清掃、セットアップを行いました。</p></article>
+        <article><div class="work-photo bass"><span>CASE 02</span></div><p class="work-meta">JAZZ BASS TYPE / 2010s</p><h3>ノイズと音切れの修理</h3><p>ジャックと配線を交換。</p></article>
+        <article><div class="work-photo black"><span>CASE 03</span></div><p class="work-meta">LES PAUL TYPE / 2000s</p><h3>弦高とフレットの調整</h3><p>すり合わせとセットアップを実施。</p></article>
       </div>
     </section>
 
     <section class="contact">
       <p>修理内容が決まっていなくてもご相談いただけます。</p>
-      <a class="contact-button" href="mailto:info@example.com">修理・調整について相談する</a>
+      <a class="contact-button" href="mailto:info@example.com">お問い合わせ</a>
     </section>
   </main>
 
-  <footer><div><strong>六弦電気工房</strong><small>GUITAR &amp; BASS REPAIR</small></div><p><a href="case-study.html">制作ケーススタディ</a><br><a href="before/index.html">修正前版を見る</a><br>© 2026 ROKUGEN ELECTRIC WORKS</p></footer>
+  <footer><div><strong>六弦電気工房</strong><small>GUITAR &amp; BASS REPAIR</small></div><p><a href="case-study.html">制作ケーススタディ</a><br><a href="before/index.html">修正前版を見る</a></p>
   <script src="script.js"></script>
 </body>
 </html>
